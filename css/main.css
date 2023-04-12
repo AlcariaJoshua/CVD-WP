@@ -1295,8 +1295,15 @@ text-decoration: none;
   background: #2b2b2b;
 }
 
+
+
+.servicesPage2 img{
+  order: 1;
+}
+
 .servicesText2 p {
   color: #ffffff;
+  order: 2;
 }
 .servicesText2 h5 {
   color: #ffffff;
