@@ -11,7 +11,7 @@
         <?php
             $args = array(
             'post_type' => 'servicesPost',
-            'posts_per_page' => -1,
+            'posts_per_page' => 3,
             );
             $newQuery = new WP_Query($args)
         ?>
@@ -30,7 +30,6 @@
                                 <span>Price may vary dependeng on <br> the design and development</span>
                     </div>
                     <div class="services__img">
-                        <img class="yellow" src="./img/services/Ellipse 1.png" alt="">
                         <?php echo get_the_post_thumbnail(); ?>
                     </div>
                 </div>       

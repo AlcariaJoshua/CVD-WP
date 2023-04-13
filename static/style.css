@@ -1337,6 +1337,9 @@
         grid-gap: 2rem;
     }
 
+    .servicesText2 p {
+        color: #ffffff;
+    }
 
     .ServicesPage .container .services h1{
         font-size: 4rem;

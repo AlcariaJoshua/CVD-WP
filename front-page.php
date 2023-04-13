@@ -42,7 +42,7 @@
                           <i  class="<?php echo get_field('text_icon');?>" ></i>
                           <h4><?php the_title(); ?></h4>
                           <p><?php the_content();?></p>
-                          <a class="btn bg--yellow" href=""><?php echo get_field('text_link'); ?></a>
+                          <a class="btn bg--yellow" href="<?php echo site_url('services') ?>"><?php echo get_field('text_link'); ?></a>
                         </div>
                         <?php 
                         endwhile;
@@ -81,22 +81,20 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, atque</p>
                 </div>
                 <div class="trends__wrapper">
-                  
                         <?php
                           $args = array(
                             'post_type' => 'trendsPost',
                             'posts_per_page' => -1,
-                          
                           );
                           $newQuery = new WP_Query($args)
                         ?>
                         <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
-                        <div class="trends__card">
-                        <?php echo get_the_post_thumbnail(); ?>
-                          <h3><?php the_title(); ?></h3>
-                          <p><?php the_content();?></p>
-                          <a href=""><?php echo get_field('trend_link'); ?></a>
-                        </div>
+                              <div class="trends__card">
+                              <?php echo get_the_post_thumbnail(); ?>
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php the_content();?></p>
+                                <a href="<?php  echo get_the_permalink() ?>"><?php echo get_field('trend_link'); ?></a>
+                              </div>
                         <?php 
                         endwhile;
                           else:
@@ -104,9 +102,6 @@
                         endif;
                         wp_reset_postdata();
                         ?>
-               
-                     
-                  
                 </div>
             </div>
         </section>
